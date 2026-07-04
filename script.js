@@ -55,3 +55,23 @@ function renderLibrary(books) {
 
 // 4. Initialize: Run the generator when the page loads
 renderLibrary(libraryData);
+
+// --- LIVE SEARCH FILTER --- //
+const searchInput = document.getElementById('searchInput');
+
+// Listen for every keystroke in the search box
+searchInput.addEventListener('keyup', (e) => {
+    // Grab what the user typed and convert it to lowercase so the search isn't case-sensitive
+    const searchString = e.target.value.toLowerCase();
+    
+    // Filter the library array
+    const filteredBooks = libraryData.filter(book => {
+        // Check if the typed letters match the title OR the author
+        return book.title.toLowerCase().includes(searchString) || 
+               book.author.toLowerCase().includes(searchString);
+    });
+    
+    // Send the filtered list back into our generator to redraw the grid instantly!
+    renderLibrary(filteredBooks);
+});
+
