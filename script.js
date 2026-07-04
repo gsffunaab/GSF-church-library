@@ -3,20 +3,20 @@ const libraryData = [
     {
         title: "The Pilgrim's Progress",
         author: "John Bunyan",
-        link: "#", // Replace '#' with your Google Drive Link
+        link: "https://drive.google.com/drive/u/3/folders/1_GJNi4r_Fjt-uN34YhXrDTBX9DLtrtMa", // Replace '#' with your Google Drive Link
         emoji: "📖"
     },
     {
         title: "Knowing God",
         author: "J.I. Packer",
-        link: "#",
+        link: "https://drive.google.com/drive/u/3/folders/1_GJNi4r_Fjt-uN34YhXrDTBX9DLtrtMa",
         emoji: "📘"
     },
     // To add a new book, just copy a block like the one below:
     {
         title: "Mere Christianity",
         author: "C.S. Lewis",
-        link: "#",
+        link: "https://drive.google.com/drive/u/3/folders/1_GJNi4r_Fjt-uN34YhXrDTBX9DLtrtMa",
         emoji: "📗"
     }
 ];
