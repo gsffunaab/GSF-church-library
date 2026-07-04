@@ -1,9 +1,13 @@
-/* --- Brand Variables --- */
+/* --- GSF Brand Variables --- */
 :root {
-    /* Change these hex codes to match colors pulled from your church logo */
-    --brand-primary: #1e293b; /* Deep slate, great for text */
-    --brand-accent: #2563eb;  /* Vibrant blue for buttons */
-    --brand-accent-hover: #1d4ed8; 
+    /* Deep Navy from the GSF Banner - used for text and headers */
+    --brand-primary: #1C194D; 
+    
+    /* GSF Crest Blue - used for buttons and highlights */
+    --brand-accent: #3470A2;  
+    
+    /* FUNAAB Green - used for button hover states for a nice pop of color */
+    --brand-accent-hover: #007A33; 
     
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
