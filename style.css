@@ -1,12 +1,7 @@
 /* --- GSF Brand Variables --- */
 :root {
-    /* Deep Navy from the GSF Banner - used for text and headers */
     --brand-primary: #1C194D; 
-    
-    /* GSF Crest Blue - used for buttons and highlights */
     --brand-accent: #3470A2;  
-    
-    /* FUNAAB Green - used for button hover states for a nice pop of color */
     --brand-accent-hover: #007A33; 
     
     --bg-color: #f8fafc;
@@ -51,7 +46,7 @@ body {
 }
 
 .brand-logo {
-    height: 80px; /* Adjust this to make your logo bigger or smaller */
+    height: 80px; 
     width: auto;
     object-fit: contain;
 }
@@ -83,7 +78,6 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
-    /* Soft, modern shadow instead of harsh grey */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     transition: all 0.3s ease;
     display: flex;
