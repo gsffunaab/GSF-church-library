@@ -50,21 +50,20 @@ body {
 }
 
 .logo-wrapper {
-    height: 90px;
-    width: 90px;
+    width: 100%;
+    max-width: 350px; /* Allows the wide dual-crest logo to stretch out and be readable */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Clean fallback if the image breaks */
-    background-color: #f1f5f9;
-    border-radius: 50%;
-    overflow: hidden;
+    /* Removed the 50% border-radius and grey background so it sits cleanly on white */
 }
 
 .brand-logo {
-    height: 100%;
     width: 100%;
+    height: auto; /* Maintains the natural rectangular proportions of your logo */
     object-fit: contain;
+    /* Optional: Adds a very subtle drop shadow to the logo itself to make it pop */
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.05));
 }
 
 .header-text h1 {
