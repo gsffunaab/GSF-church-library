@@ -80,6 +80,37 @@ body {
     font-weight: 500;
 }
 
+/* --- Search Bar --- */
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 3rem auto; /* Centers the bar and adds spacing below */
+    padding: 0 10px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 1.2rem 1.8rem;
+    font-size: 1.1rem;
+    color: var(--brand-primary);
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 50px; /* Creates the premium pill shape */
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    font-family: 'Inter', sans-serif;
+}
+
+#searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+/* The glowing effect when a user clicks into the search box */
+#searchInput:focus {
+    border-color: var(--brand-accent);
+    box-shadow: 0 4px 15px rgba(0, 132, 61, 0.15);
+}
+
 /* --- Centered Grid Layout --- */
 .book-grid {
     display: grid;
