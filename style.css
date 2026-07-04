@@ -1,13 +1,14 @@
-/* --- GSF Brand Variables --- */
+/* --- GSF Brand Palette --- */
 :root {
-    --brand-primary: #1C194D; 
-    --brand-accent: #3470A2;  
-    --brand-accent-hover: #007A33; 
+    --brand-primary: #0F172A; /* Much deeper, sharper navy for professional text */
+    --brand-accent: #00843D;  /* FUNAAB Green is now the default button state */
+    --brand-accent-hover: #00662F; /* Darker green on hover */
+    --brand-secondary: #3470A2; /* GSF Blue for the top border accent */
     
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
+    --bg-color: #F8FAFC; 
+    --card-bg: #FFFFFF;
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
 }
 
 * {
@@ -25,83 +26,100 @@ body {
 }
 
 .container {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-/* --- Header & Logo Setup --- */
+/* --- Redesigned Hero Header --- */
 .site-header {
     background-color: var(--card-bg);
     border-bottom: 1px solid var(--border-color);
-    padding: 2.5rem 0;
-    margin-bottom: 3rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    border-top: 6px solid var(--brand-secondary);
+    padding: 4rem 0; /* More breathing room */
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
 
 .header-container {
     display: flex;
+    flex-direction: column; /* Stacks the logo and text vertically */
     align-items: center;
+    text-align: center;
     gap: 1.5rem;
 }
 
+.logo-wrapper {
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Clean fallback if the image breaks */
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .brand-logo {
-    height: 80px; 
-    width: auto;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
 .header-text h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
     color: var(--brand-primary);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .header-text p {
     color: var(--text-muted);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
+    font-weight: 500;
 }
 
-/* --- Responsive Grid --- */
+/* --- Centered Grid Layout --- */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2.5rem;
     padding-bottom: 5rem;
+    justify-content: center; /* Centers the cards when there are fewer items */
 }
 
-/* --- Elevated Cards --- */
+/* --- Refined Cards --- */
 .book-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s ease-in-out;
     display: flex;
     flex-direction: column;
 }
 
 .book-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08);
     border-color: var(--brand-accent);
 }
 
 .book-cover {
     background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-    height: 180px;
+    height: 190px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4.5rem;
+    font-size: 5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .book-content {
-    padding: 1.5rem;
+    padding: 1.75rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -109,14 +127,15 @@ body {
 }
 
 .book-info {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .book-info h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
     line-height: 1.3;
+    color: var(--brand-primary);
 }
 
 .author {
@@ -125,23 +144,24 @@ body {
     font-weight: 500;
 }
 
-/* --- Premium Buttons --- */
+/* --- FUNAAB Green Buttons --- */
 .btn {
     display: block;
     width: 100%;
     background-color: var(--brand-accent);
     color: white;
     text-decoration: none;
-    padding: 0.8rem 1rem;
+    padding: 0.85rem 1rem;
     border-radius: 8px;
     text-align: center;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 1rem;
+    transition: all 0.2s ease;
 }
 
 .btn:hover {
     background-color: var(--brand-accent-hover);
+    box-shadow: 0 4px 10px rgba(0, 132, 61, 0.2);
 }
 
 .btn:active {
@@ -151,15 +171,8 @@ body {
 /* --- Footer --- */
 .site-footer {
     text-align: center;
-    padding: 2.5rem 0;
+    padding: 3rem 0;
     color: var(--text-muted);
     font-size: 0.9rem;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 600px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
+    border-top: 1px solid var(--border-color);
 }
