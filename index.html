@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GSF FUNAAB Digital Library</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Symmetrical Hero Header -->
     <header class="site-header">
         <div class="container header-container">
-            <!-- REPLACE 'logo.png' BELOW WITH YOUR EXACT IMAGE FILE NAME -->
-            <img src="logo.png" alt="GSF FUNAAB Logo" class="brand-logo">
+            <!-- Added an alt-text fallback style so it looks clean even if the image breaks -->
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="GSF Logo" class="brand-logo">
+            </div>
             <div class="header-text">
                 <h1>GOFAMINT Students' Fellowship</h1>
                 <p>FUNAAB Digital Library & Reading Resources</p>
@@ -21,9 +24,9 @@
     </header>
 
     <main class="container">
+        <!-- Grid now centers items when there are only a few -->
         <section class="book-grid">
             
-            <!-- Book Card 1 -->
             <article class="book-card">
                 <div class="book-cover">
                     <span>📖</span> 
@@ -37,7 +40,6 @@
                 </div>
             </article>
 
-            <!-- Book Card 2 -->
             <article class="book-card">
                 <div class="book-cover">
                     <span>📘</span>
