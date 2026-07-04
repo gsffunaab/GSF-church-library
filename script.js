@@ -1,0 +1,57 @@
+// 1. The Database: This is the only part you ever need to edit.
+const libraryData = [
+    {
+        title: "The Pilgrim's Progress",
+        author: "John Bunyan",
+        link: "#", // Replace '#' with your Google Drive Link
+        emoji: "📖"
+    },
+    {
+        title: "Knowing God",
+        author: "J.I. Packer",
+        link: "#",
+        emoji: "📘"
+    },
+    // To add a new book, just copy a block like the one below:
+    {
+        title: "Mere Christianity",
+        author: "C.S. Lewis",
+        link: "#",
+        emoji: "📗"
+    }
+];
+
+// 2. The Engine: This grabs the grid from your HTML
+const gridContainer = document.getElementById('bookGrid');
+
+// 3. The Generator: This loops through your database and builds the UI
+function renderLibrary(books) {
+    // Clear out anything currently in the grid
+    gridContainer.innerHTML = '';
+
+    // Loop through each book and create a card
+    books.forEach(book => {
+        const card = document.createElement('article');
+        card.className = 'book-card';
+        
+        // Inject the data into the HTML structure
+        card.innerHTML = `
+            <div class="book-cover">
+                <span>${book.emoji}</span> 
+            </div>
+            <div class="book-content">
+                <div class="book-info">
+                    <h2>${book.title}</h2>
+                    <p class="author">${book.author}</p>
+                </div>
+                <a href="${book.link}" target="_blank" rel="noopener noreferrer" class="btn">Read Now</a>
+            </div>
+        `;
+        
+        // Add the finished card to the page
+        gridContainer.appendChild(card);
+    });
+}
+
+// 4. Initialize: Run the generator when the page loads
+renderLibrary(libraryData);
